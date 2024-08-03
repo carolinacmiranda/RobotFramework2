@@ -1,2 +1,4 @@
-bdr_reports/
+*.xml
+*.html
+*.png
 .DS_Store
