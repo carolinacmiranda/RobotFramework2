@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.11.0 on darwin)" generated="20230312 17:46:54.772" rpa="false" schemaversion="3">
+<suite id="s1" name="ligar desligar robos testCases" source="/Users/carolinacosta/Documents/qa-bdr/Web/bdr_tests/ligar_desligar_robos_testCases.robot">
+<kw name="Abrir navegador" library="ligar_desligar_robos_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230312 17:46:54.843" level="INFO">Opening browser 'chrome' to base url 'https://app.smarttbot.com/public/login'.</msg>
+<status status="PASS" starttime="20230312 17:46:54.843" endtime="20230312 17:46:59.979"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230312 17:46:59.979" endtime="20230312 17:47:00.387"/>
+</kw>
+<status status="PASS" starttime="20230312 17:46:54.843" endtime="20230312 17:47:00.387"/>
+</kw>
+<test id="s1-t1" name="Cenário 01: Criar robô Tangram - modo simulado" line="9">
+<kw name="Dado que estou logado" library="BDDpt-br" sourcename="Dado ${keyword}">
+<kw name="Run Keyword" library="BuiltIn">
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Que estou logado" library="ligar_desligar_robos_resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOGIN}</arg>
+<arg>automated01</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230312 17:47:00.390" level="INFO">Typing text 'automated01' into text field 'id=login-username'.</msg>
+<status status="PASS" starttime="20230312 17:47:00.390" endtime="20230312 17:47:00.516"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${PASSWORD}</arg>
+<arg>Testing202</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230312 17:47:00.516" level="INFO">Typing password into text field 'id=login-password'.</msg>
+<msg timestamp="20230312 17:47:00.534" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230312 17:47:00.562" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230312 17:47:00.516" endtime="20230312 17:47:00.562"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ACESSAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230312 17:47:00.562" level="INFO">Clicking element 'xpath=//span[@class='jss56'][contains(.,'ACESSAR')]'.</msg>
+<status status="PASS" starttime="20230312 17:47:00.562" endtime="20230312 17:47:00.596"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${PAG_PRINCIPAL}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230312 17:47:00.596" endtime="20230312 17:47:05.453"/>
+</kw>
+<status status="PASS" starttime="20230312 17:47:00.390" endtime="20230312 17:47:05.453"/>
+</kw>
+<status status="PASS" starttime="20230312 17:47:00.388" endtime="20230312 17:47:05.453"/>
+</kw>
+<status status="PASS" starttime="20230312 17:47:00.388" endtime="20230312 17:47:05.453"/>
+</kw>
+<kw name="Quando eu clico em criar robôs Tangram" library="BDDpt-br" sourcename="Quando ${keyword}">
+<kw name="Run Keyword" library="BuiltIn">
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Eu clico em criar robôs Tangram" library="ligar_desligar_robos_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CRIAR_ROBO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230312 17:47:05.455" level="INFO">Clicking element 'xpath=//span[@class='jss321'][contains(.,'Criar Robô')]'.</msg>
+<status status="PASS" starttime="20230312 17:47:05.455" endtime="20230312 17:47:05.499"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${MODO_FACIL}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230312 17:47:05.499" endtime="20230312 17:47:07.628"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${MODO_COMPLETO}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230312 17:47:07.628" endtime="20230312 17:47:07.640"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CONFIGURAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230312 17:47:07.640" level="INFO">Clicking element 'xpath=//sb-button[@type='solid'][contains(.,'Configurar')]'.</msg>
+<status status="PASS" starttime="20230312 17:47:07.640" endtime="20230312 17:47:07.698"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TANGRAM}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230312 17:47:07.698" level="INFO">Clicking element 'xpath=//sb-p[@fontsize='sm'][contains(.,'Tangram')]'.</msg>
+<status status="PASS" starttime="20230312 17:47:07.698" endtime="20230312 17:47:07.728"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MODO_SIMULADO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230312 17:47:07.728" level="INFO">Clicking element 'xpath=(//sb-button[@data-testid='button'][contains(.,'Configurar')])[1]'.</msg>
+<status status="PASS" starttime="20230312 17:47:07.728" endtime="20230312 17:47:07.771"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>dom:${NOME_ROBÔ}</arg>
+<arg>Testes Automatizados - Tangram</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230312 17:47:07.771" level="INFO">Typing text 'Testes Automatizados - Tangram' into text field 'dom:document.querySelector('sb-input-text').shadowRoot .querySelector('input')'.</msg>
+<status status="PASS" starttime="20230312 17:47:07.771" endtime="20230312 17:47:07.833"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${AVANÇAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230312 17:47:07.834" level="INFO">Clicking element 'xpath=//sb-button[@type='link'][contains(.,'Avançar')]'.</msg>
+<status status="PASS" starttime="20230312 17:47:07.833" endtime="20230312 17:47:07.855"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SALVAR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230312 17:47:07.855" endtime="20230312 17:47:11.797"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SALVAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230312 17:47:11.797" level="INFO">Clicking element 'id=save-instance-params'.</msg>
+<status status="PASS" starttime="20230312 17:47:11.797" endtime="20230312 17:47:11.837"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SALVAR_2}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230312 17:47:11.837" endtime="20230312 17:47:12.276"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SALVAR_2}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230312 17:47:12.276" level="INFO">Clicking element 'xpath=(//span[contains(.,'Salvar')])[2]'.</msg>
+<status status="PASS" starttime="20230312 17:47:12.276" endtime="20230312 17:47:12.313"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${INICIAR}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230312 17:47:12.313" endtime="20230312 17:47:12.795"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${INICIAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230312 17:47:12.795" level="INFO">Clicking element 'xpath=//button[contains(@aria-label,'Iniciar')]'.</msg>
+<status status="PASS" starttime="20230312 17:47:12.795" endtime="20230312 17:47:12.843"/>
+</kw>
+<status status="PASS" starttime="20230312 17:47:05.455" endtime="20230312 17:47:12.843"/>
+</kw>
+<status status="PASS" starttime="20230312 17:47:05.454" endtime="20230312 17:47:12.843"/>
+</kw>
+<status status="PASS" starttime="20230312 17:47:05.453" endtime="20230312 17:47:12.843"/>
+</kw>
+<kw name="Então devo conseguir criar um robô com sucesso" library="BDDpt-br" sourcename="Então ${keyword}">
+<kw name="Run Keyword" library="BuiltIn">
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Devo conseguir criar um robô com sucesso" library="ligar_desligar_robos_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SUCESSO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230312 17:47:12.845" endtime="20230312 17:47:12.855"/>
+</kw>
+<status status="PASS" starttime="20230312 17:47:12.845" endtime="20230312 17:47:12.855"/>
+</kw>
+<status status="PASS" starttime="20230312 17:47:12.844" endtime="20230312 17:47:12.855"/>
+</kw>
+<status status="PASS" starttime="20230312 17:47:12.843" endtime="20230312 17:47:12.855"/>
+</kw>
+<status status="PASS" starttime="20230312 17:47:00.387" endtime="20230312 17:47:12.855"/>
+</test>
+<test id="s1-t2" name="Cenário 02: Desligar robô Tangram - modo simulado" line="14">
+<kw name="Dado que estou na aba de parâmetros do robô" library="BDDpt-br" sourcename="Dado ${keyword}">
+<kw name="Run Keyword" library="BuiltIn">
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Que estou na aba de parâmetros do robô" library="ligar_desligar_robos_resources">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${PARAR}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230312 17:47:12.857" endtime="20230312 17:47:15.001"/>
+</kw>
+<status status="PASS" starttime="20230312 17:47:12.857" endtime="20230312 17:47:15.001"/>
+</kw>
+<status status="PASS" starttime="20230312 17:47:12.856" endtime="20230312 17:47:15.001"/>
+</kw>
+<status status="PASS" starttime="20230312 17:47:12.856" endtime="20230312 17:47:15.001"/>
+</kw>
+<kw name="Quando eu clico no botão de parar robô" library="BDDpt-br" sourcename="Quando ${keyword}">
+<kw name="Run Keyword" library="BuiltIn">
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Eu clico no botão de parar robô" library="ligar_desligar_robos_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PARAR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230312 17:47:15.002" endtime="20230312 17:47:15.011"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${PARAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230312 17:47:15.012" level="INFO">Clicking element 'xpath=//button[@aria-label='Parar']'.</msg>
+<status status="PASS" starttime="20230312 17:47:15.011" endtime="20230312 17:47:15.052"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CONFIRMAR_PARAR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20230312 17:47:20.368" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230312 17:47:20.368" level="FAIL">Element 'name=confirm' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20230312 17:47:15.052" endtime="20230312 17:47:20.370"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CONFIRMAR_PARAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230312 17:47:20.370" endtime="20230312 17:47:20.370"/>
+</kw>
+<status status="FAIL" starttime="20230312 17:47:15.002" endtime="20230312 17:47:20.370"/>
+</kw>
+<status status="FAIL" starttime="20230312 17:47:15.001" endtime="20230312 17:47:20.370"/>
+</kw>
+<status status="FAIL" starttime="20230312 17:47:15.001" endtime="20230312 17:47:20.370"/>
+</kw>
+<kw name="Então o robô deve ser parado com sucesso" library="BDDpt-br" sourcename="Então ${keyword}">
+<status status="NOT RUN" starttime="20230312 17:47:20.370" endtime="20230312 17:47:20.370"/>
+</kw>
+<status status="FAIL" starttime="20230312 17:47:12.856" endtime="20230312 17:47:20.371">Element 'name=confirm' not visible after 5 seconds.</status>
+</test>
+<test id="s1-t3" name="Cenário 03: Criar robô Price Action - modo simulado" line="19">
+<kw name="Dado que estou logado" library="BDDpt-br" sourcename="Dado ${keyword}">
+<kw name="Run Keyword" library="BuiltIn">
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Que estou logado" library="ligar_desligar_robos_resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOGIN}</arg>
+<arg>automated01</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230312 17:47:20.372" level="INFO">Typing text 'automated01' into text field 'id=login-username'.</msg>
+<msg timestamp="20230312 17:47:20.550" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230312 17:47:20.550" level="FAIL">Element with locator 'id=login-username' not found.</msg>
+<status status="FAIL" starttime="20230312 17:47:20.372" endtime="20230312 17:47:20.551"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${PASSWORD}</arg>
+<arg>Testing202</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230312 17:47:20.551" endtime="20230312 17:47:20.551"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ACESSAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230312 17:47:20.551" endtime="20230312 17:47:20.551"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${PAG_PRINCIPAL}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20230312 17:47:20.551" endtime="20230312 17:47:20.551"/>
+</kw>
+<status status="FAIL" starttime="20230312 17:47:20.372" endtime="20230312 17:47:20.551"/>
+</kw>
+<status status="FAIL" starttime="20230312 17:47:20.371" endtime="20230312 17:47:20.551"/>
+</kw>
+<status status="FAIL" starttime="20230312 17:47:20.371" endtime="20230312 17:47:20.551"/>
+</kw>
+<kw name="Quando eu clico em criar robôs Price Action" library="BDDpt-br" sourcename="Quando ${keyword}">
+<status status="NOT RUN" starttime="20230312 17:47:20.551" endtime="20230312 17:47:20.551"/>
+</kw>
+<kw name="Então devo conseguir criar um robô com sucesso" library="BDDpt-br" sourcename="Então ${keyword}">
+<status status="NOT RUN" starttime="20230312 17:47:20.551" endtime="20230312 17:47:20.551"/>
+</kw>
+<status status="FAIL" starttime="20230312 17:47:20.371" endtime="20230312 17:47:20.551">Element with locator 'id=login-username' not found.</status>
+</test>
+<test id="s1-t4" name="Cenário 04: Desligar robô Price Action - modo simulado" line="24">
+<kw name="Dado que estou na aba de parâmetros do robô" library="BDDpt-br" sourcename="Dado ${keyword}">
+<kw name="Run Keyword" library="BuiltIn">
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Que estou na aba de parâmetros do robô" library="ligar_desligar_robos_resources">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${PARAR}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<msg timestamp="20230312 17:47:25.896" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230312 17:47:25.896" level="FAIL">Element with locator 'xpath=//button[@aria-label='Parar']' not found.</msg>
+<status status="FAIL" starttime="20230312 17:47:20.553" endtime="20230312 17:47:25.897"/>
+</kw>
+<status status="FAIL" starttime="20230312 17:47:20.553" endtime="20230312 17:47:25.897"/>
+</kw>
+<status status="FAIL" starttime="20230312 17:47:20.552" endtime="20230312 17:47:25.897"/>
+</kw>
+<status status="FAIL" starttime="20230312 17:47:20.552" endtime="20230312 17:47:25.897"/>
+</kw>
+<kw name="Quando eu clico no botão de parar robô" library="BDDpt-br" sourcename="Quando ${keyword}">
+<status status="NOT RUN" starttime="20230312 17:47:25.897" endtime="20230312 17:47:25.897"/>
+</kw>
+<kw name="Então o robô deve ser parado com sucesso" library="BDDpt-br" sourcename="Então ${keyword}">
+<status status="NOT RUN" starttime="20230312 17:47:25.897" endtime="20230312 17:47:25.897"/>
+</kw>
+<status status="FAIL" starttime="20230312 17:47:20.552" endtime="20230312 17:47:25.897">Element with locator 'xpath=//button[@aria-label='Parar']' not found.</status>
+</test>
+<kw name="Fechar navegador" library="ligar_desligar_robos_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230312 17:47:26.063" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230312 17:47:25.897" endtime="20230312 17:47:26.063"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230312 17:47:26.063" endtime="20230312 17:47:26.155"/>
+</kw>
+<status status="PASS" starttime="20230312 17:47:25.897" endtime="20230312 17:47:26.156"/>
+</kw>
+<status status="FAIL" starttime="20230312 17:46:54.772" endtime="20230312 17:47:26.156"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="3" skip="0" id="s1" name="ligar desligar robos testCases">ligar desligar robos testCases</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
